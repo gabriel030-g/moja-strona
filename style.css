@@ -400,9 +400,9 @@ font-size:20px;
 
 .project p {
 
+    margin-top:10px;
 
-margin-bottom:20px;
-
+    margin-bottom:30px;
 
 }
 
@@ -411,9 +411,13 @@ margin-bottom:20px;
 
 .tags {
 
+    margin-top:auto;
 
-margin-top:auto;
+    display:flex;
 
+    gap:10px;
+
+    flex-wrap:wrap;
 
 }
 
