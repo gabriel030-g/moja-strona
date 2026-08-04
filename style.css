@@ -10,12 +10,12 @@ scroll-behavior:smooth;
 }
 
 
+
 body {
 
 font-family:Arial,sans-serif;
 
-background:
-linear-gradient(
+background:linear-gradient(
 135deg,
 #020617,
 #1e293b
@@ -27,10 +27,16 @@ color:white;
 
 
 
-/* MENU */
+/* NAV */
 
 
 nav {
+
+position:sticky;
+
+top:0;
+
+z-index:100;
 
 display:flex;
 
@@ -40,7 +46,12 @@ align-items:center;
 
 padding:25px 8%;
 
+background:rgba(2,6,23,.8);
+
+backdrop-filter:blur(10px);
+
 }
+
 
 
 .logo {
@@ -48,6 +59,7 @@ padding:25px 8%;
 color:#38bdf8;
 
 }
+
 
 
 nav ul {
@@ -61,11 +73,21 @@ list-style:none;
 }
 
 
+
 nav a {
 
 color:white;
 
 text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+nav a:hover {
+
+color:#38bdf8;
 
 }
 
@@ -84,6 +106,7 @@ padding:100px 20px;
 }
 
 
+
 header h1 {
 
 font-size:60px;
@@ -91,13 +114,15 @@ font-size:60px;
 }
 
 
-header h3 {
 
-color:#38bdf8;
+header h3 {
 
 margin:20px;
 
+color:#38bdf8;
+
 }
+
 
 
 header p {
@@ -110,23 +135,44 @@ color:#cbd5e1;
 
 
 
-button {
+.location {
+
+margin-bottom:20px;
+
+}
+
+
+
+.main-button {
+
+display:inline-block;
 
 margin-top:30px;
 
 padding:15px 35px;
 
-border:none;
-
 border-radius:30px;
 
 background:#38bdf8;
 
-font-size:18px;
+color:#020617;
 
-cursor:pointer;
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
 
 }
+
+
+.main-button:hover {
+
+transform:translateY(-5px);
+
+}
+
+
 
 
 
@@ -142,10 +188,10 @@ margin:auto;
 }
 
 
+
 section {
 
-
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,.08);
 
 margin:30px 20px;
 
@@ -153,8 +199,10 @@ padding:40px;
 
 border-radius:20px;
 
+animation:show 1s ease;
 
 }
+
 
 
 
@@ -168,12 +216,19 @@ margin-bottom:20px;
 
 
 
+p {
+
+line-height:1.6;
+
+}
+
+
+
 
 /* TECHNOLOGIE */
 
 
 .skills {
-
 
 display:flex;
 
@@ -181,12 +236,11 @@ flex-wrap:wrap;
 
 gap:15px;
 
-
 }
 
 
-.skills div {
 
+.skills div {
 
 background:#0f172a;
 
@@ -194,120 +248,23 @@ padding:15px 25px;
 
 border-radius:20px;
 
-
 }
 
 
 
 
-/* PROJEKT */
+
+/* PROJEKTY */
 
 
-.project {
-
-
-background:#0f172a;
-
-padding:25px;
-
-border-radius:15px;
-
-
-}
-
-
-
-
-a {
-
-color:#38bdf8;
-
-}
-
-
-
-footer {
-
-text-align:center;
-
-padding:40px;
-
-color:#94a3b8;
-
-}nav {
-    position: sticky;
-    top: 0;
-    background: rgba(2,6,23,0.8);
-    backdrop-filter: blur(10px);
-    z-index: 100;
-}
-
-
-nav a {
-    transition: 0.3s;
-}
-
-
-nav a:hover {
-    color: #38bdf8;
-}section {
-    animation: show 1s ease;
-}
-
-
-@keyframes show {
-
-from {
-    opacity:0;
-    transform:translateY(30px);
-}
-
-to {
-    opacity:1;
-    transform:translateY(0);
-}
-
-}@media (max-width: 700px) {
-
-nav {
-    flex-direction: column;
-    gap: 20px;
-}
-
-nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    font-size: 14px;
-}
-
-}@media (max-width:700px){
-
-header h1 {
-    font-size:42px;
-}
-
-header {
-    padding:70px 20px;
-}
-
-}section p {
-
-max-width:700px;
-
-}.location {
-
-color:#94a3b8;
-margin-top:15px;
-
-}.projects-container {
+.projects-container {
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(
+auto-fit,
+minmax(250px,1fr)
+);
 
 gap:25px;
 
@@ -317,7 +274,19 @@ gap:25px;
 
 .project {
 
-transition:0.3s;
+background:#0f172a;
+
+padding:25px;
+
+border-radius:15px;
+
+min-height:230px;
+
+display:flex;
+
+flex-direction:column;
+
+transition:.3s;
 
 }
 
@@ -327,13 +296,23 @@ transition:0.3s;
 
 transform:translateY(-10px);
 
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+
+
+.project p {
+
+margin-top:15px;
+
 }
 
 
 
 .tags {
 
-margin-top:20px;
+margin-top:auto;
 
 }
 
@@ -349,10 +328,107 @@ padding:7px 15px;
 
 border-radius:20px;
 
-font-size:14px;
+display:inline-block;
 
 margin-right:8px;
 
-display:inline-block;
+font-size:14px;
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer {
+
+text-align:center;
+
+padding:40px;
+
+color:#94a3b8;
+
+}
+
+
+
+
+
+/* ANIMACJA */
+
+
+@keyframes show {
+
+from {
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+
+/* TELEFON */
+
+
+@media(max-width:700px){
+
+
+nav {
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+nav ul {
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+header h1 {
+
+font-size:42px;
+
+}
+
+
+header {
+
+padding:70px 20px;
+
+}
+
+
+section {
+
+padding:25px;
+
+}
+
 
 }
