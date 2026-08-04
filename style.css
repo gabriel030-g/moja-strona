@@ -324,21 +324,19 @@ gap:25px;
 
 .project {
 
+    background:#0f172a;
 
-background:#0f172a;
+    padding:25px;
 
-padding:25px;
+    border-radius:15px;
 
-border-radius:15px;
+    min-height:280px;
 
-min-height:240px;
+    display:flex;
 
-display:flex;
+    flex-direction:column;
 
-flex-direction:column;
-
-transition:.3s;
-
+    transition:.3s;
 
 }
 
