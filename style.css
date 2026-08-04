@@ -463,4 +463,140 @@ section {
 }
 
 
+}/* PRZYCISKI PROJEKTÓW */
+
+
+.project-buttons {
+
+    margin-top:auto;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+
+.project-buttons a {
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    background:#38bdf8;
+
+    color:#020617;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.project-buttons a:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 8px 20px rgba(56,189,248,.4);
+
+}/* TRYB JASNY / CIEMNY */
+
+
+#theme-toggle {
+
+    background:#38bdf8;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+#theme-toggle:hover {
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* JASNY MOTYW */
+
+
+body.light {
+
+    background:
+    linear-gradient(
+        135deg,
+        #f8fafc,
+        #cbd5e1
+    );
+
+    color:#020617;
+
+}
+
+
+
+body.light nav {
+
+    background:rgba(255,255,255,.8);
+
+}
+
+
+
+body.light nav a {
+
+    color:#020617;
+
+}
+
+
+
+body.light section {
+
+    background:rgba(255,255,255,.7);
+
+}
+
+
+
+body.light .project {
+
+    background:#e2e8f0;
+
+}
+
+
+
+body.light .skills div {
+
+    background:#e2e8f0;
+
+}
+
+
+
+body.light header p {
+
+    color:#334155;
+
 }

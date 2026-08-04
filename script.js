@@ -117,3 +117,29 @@ function typeEffect(){
 
 
 typeEffect();
+// =========================
+// TRYB JASNY / CIEMNY
+// =========================
+
+
+const themeButton = document.querySelector("#theme-toggle");
+
+
+themeButton.addEventListener("click", ()=>{
+
+
+    document.body.classList.toggle("light");
+
+
+    if(document.body.classList.contains("light")){
+
+        themeButton.textContent="🌙";
+
+    } else {
+
+        themeButton.textContent="☀️";
+
+    }
+
+
+});
