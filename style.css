@@ -1,70 +1,237 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
+
+
+html {
+scroll-behavior:smooth;
+}
+
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-    min-height: 100vh;
+
+font-family:Arial,sans-serif;
+
+background:
+linear-gradient(
+135deg,
+#020617,
+#1e293b
+);
+
+color:white;
+
 }
+
+
+
+/* MENU */
+
+
+nav {
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 8%;
+
+}
+
+
+.logo {
+
+color:#38bdf8;
+
+}
+
+
+nav ul {
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+
+nav a {
+
+color:white;
+
+text-decoration:none;
+
+}
+
+
+
+
+/* HEADER */
+
 
 header {
-    text-align: center;
-    padding: 80px 20px;
+
+text-align:center;
+
+padding:100px 20px;
+
 }
+
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+
+font-size:60px;
+
 }
+
+
+header h3 {
+
+color:#38bdf8;
+
+margin:20px;
+
+}
+
 
 header p {
-    color: #cbd5e1;
-    font-size: 1.2rem;
+
+font-size:20px;
+
+color:#cbd5e1;
+
 }
+
+
+
+button {
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:30px;
+
+background:#38bdf8;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+
+/* SEKCJE */
+
 
 main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+
+max-width:1000px;
+
+margin:auto;
+
 }
+
 
 section {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+
+background:rgba(255,255,255,0.08);
+
+margin:30px 20px;
+
+padding:40px;
+
+border-radius:20px;
+
+
 }
+
+
 
 h2 {
-    margin-bottom: 20px;
-    color: #38bdf8;
+
+color:#38bdf8;
+
+margin-bottom:20px;
+
 }
 
-p {
-    line-height: 1.8;
+
+
+
+/* TECHNOLOGIE */
+
+
+.skills {
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+
 }
 
-ul {
-    list-style: none;
+
+.skills div {
+
+
+background:#0f172a;
+
+padding:15px 25px;
+
+border-radius:20px;
+
+
 }
 
-ul li {
-    padding: 10px 0;
-    font-size: 18px;
+
+
+
+/* PROJEKT */
+
+
+.project {
+
+
+background:#0f172a;
+
+padding:25px;
+
+border-radius:15px;
+
+
 }
 
-ul li::before {
-    content: "🚀 ";
+
+
+
+a {
+
+color:#38bdf8;
+
 }
+
+
 
 footer {
-    text-align: center;
-    padding: 30px;
-    color: #94a3b8;
+
+text-align:center;
+
+padding:40px;
+
+color:#94a3b8;
+
 }
