@@ -144,37 +144,28 @@ themeButton.addEventListener("click", ()=>{
 
 });
 // =========================
-// ANIMACJA PROJEKTÓW
+// ANIMACJA PROJEKTÓW PO KOLEI
 // =========================
 
-
-const projects = document.querySelectorAll(".project-card");
+const projects = document.querySelectorAll(".project");
 
 
 const projectObserver = new IntersectionObserver((entries)=>{
 
-
     entries.forEach(entry=>{
-
 
         if(entry.isIntersecting){
 
-
             entry.target.classList.add("show");
 
-
         }
-
 
     });
 
 
 },{
-
     threshold:0.2
-
 });
-
 
 
 projects.forEach(project=>{
