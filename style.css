@@ -14,8 +14,7 @@ body {
 
     font-family:Arial, sans-serif;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #020617,
         #1e293b
@@ -23,11 +22,14 @@ body {
 
     color:white;
 
+    transition:.3s;
 }
 
 
 
-/* NAVBAR */
+/* =====================
+ NAVBAR
+===================== */
 
 
 nav {
@@ -53,11 +55,13 @@ nav {
 }
 
 
+
 .logo {
 
     color:#38bdf8;
 
 }
+
 
 
 nav ul {
@@ -69,6 +73,7 @@ nav ul {
     list-style:none;
 
 }
+
 
 
 nav a {
@@ -90,9 +95,30 @@ nav a:hover {
 
 
 
+#theme-toggle {
+
+    background:#38bdf8;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
 
 
-/* HEADER */
+
+
+
+
+/* =====================
+ HEADER
+===================== */
 
 
 header {
@@ -131,12 +157,12 @@ header p {
 }
 
 
+
 .location {
 
     margin-top:15px;
 
 }
-
 
 
 
@@ -158,22 +184,17 @@ header p {
 
     font-weight:bold;
 
-    transition:.3s;
-
-}
-
-
-.main-button:hover {
-
-    transform:translateY(-5px);
-
 }
 
 
 
 
 
-/* MAIN */
+
+
+/* =====================
+ SEKCJE
+===================== */
 
 
 main {
@@ -186,30 +207,22 @@ main {
 
 
 
-
-/* SEKCJE */
-
-
 section {
 
-    background:
-    rgba(255,255,255,.08);
-
+    background:rgba(255,255,255,.08);
 
     margin:30px 20px;
 
-
     padding:40px;
-
 
     border-radius:20px;
 
 
     opacity:0;
 
-    transform:translateY(50px);
+    transform:translateY(40px);
 
-    transition:.8s ease;
+    transition:.8s;
 
 }
 
@@ -234,6 +247,7 @@ h2 {
 }
 
 
+
 section p {
 
     line-height:1.8;
@@ -244,7 +258,10 @@ section p {
 
 
 
-/* TECHNOLOGIE */
+
+/* =====================
+ TECHNOLOGIE
+===================== */
 
 
 .skills {
@@ -272,7 +289,6 @@ section p {
 }
 
 
-
 .skills div:hover {
 
     transform:translateY(-5px);
@@ -283,7 +299,10 @@ section p {
 
 
 
-/* PROJEKTY */
+
+/* =====================
+ PROJEKTY
+===================== */
 
 
 .projects-container {
@@ -307,15 +326,17 @@ section p {
 
     border-radius:20px;
 
-    min-height:280px;
+
+    height:520px;
 
 
     display:flex;
 
     flex-direction:column;
 
+    overflow:hidden;
 
-    transition:.35s;
+   transition:.4s ease;
 
 }
 
@@ -324,12 +345,10 @@ section p {
 
 .project:hover {
 
-    transform:translateY(-10px);
-
+    transform:translateY(-12px);
 
     box-shadow:
-
-    0 20px 40px rgba(56,189,248,.25);
+    0 25px 50px rgba(56,189,248,.35);
 
 }
 
@@ -345,6 +364,38 @@ section p {
 
 
 
+
+
+/* OBRAZKI */
+
+
+.project img {
+
+    width:100%;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    transition:.4s ease;
+
+}.project:hover img {
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+/* OPIS */
+
+
 .project p {
 
     margin-bottom:20px;
@@ -355,18 +406,21 @@ section p {
 
 
 
+
 /* TAGI */
 
 
 .tags {
-
-    margin-top:auto;
 
     display:flex;
 
     flex-wrap:wrap;
 
     gap:8px;
+
+    margin-top:auto;
+
+    margin-bottom:20px;
 
 }
 
@@ -391,12 +445,45 @@ section p {
 
 
 
-/* LINKI */
+
+/* PRZYCISKI */
 
 
-a {
+.project-buttons {
 
-    color:#38bdf8;
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+
+.project-buttons a {
+
+    background:#38bdf8;
+
+    color:#020617;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.project-buttons a:hover {
+
+    transform:translateY(-3px);
 
 }
 
@@ -404,7 +491,81 @@ a {
 
 
 
-/* FOOTER */
+
+/* =====================
+ TRYB JASNY
+===================== */
+
+
+body.light {
+
+    background:linear-gradient(
+        135deg,
+        #f8fafc,
+        #cbd5e1
+    );
+
+    color:#020617;
+
+}
+
+
+
+body.light nav {
+
+    background:rgba(255,255,255,.8);
+
+}
+
+
+
+body.light nav a {
+
+    color:#020617;
+
+}
+
+
+
+body.light section {
+
+    background:rgba(255,255,255,.75);
+
+}
+
+
+
+body.light .project {
+
+    background:#e2e8f0;
+
+}
+
+
+
+body.light .skills div {
+
+    background:#e2e8f0;
+
+}
+
+
+
+body.light header p {
+
+    color:#334155;
+
+}
+
+
+
+
+
+
+
+/* =====================
+ FOOTER
+===================== */
 
 
 footer {
@@ -423,7 +584,9 @@ footer {
 
 
 
-/* TELEFONY */
+/* =====================
+ TELEFON
+===================== */
 
 
 @media(max-width:700px){
@@ -456,6 +619,7 @@ header h1 {
 }
 
 
+
 section {
 
     padding:25px;
@@ -463,140 +627,61 @@ section {
 }
 
 
-}/* PRZYCISKI PROJEKTÓW */
+
+.project {
+
+    height:auto;
+
+    min-height:520px;
+
+}
 
 
-.project-buttons {
+}/* =====================
+ ANIMACJA KART PROJEKTÓW
+===================== */
 
-    margin-top:auto;
 
-    display:flex;
+.project-card {
 
-    gap:15px;
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s ease;
 
 }
 
 
 
-.project-buttons a {
+.project-card.show {
 
-    text-decoration:none;
+    opacity:1;
 
-    padding:10px 20px;
-
-    border-radius:20px;
-
-    background:#38bdf8;
-
-    color:#020617;
-
-    font-weight:bold;
-
-    font-size:14px;
-
-    transition:.3s;
+    transform:translateY(0);
 
 }
 
 
 
-.project-buttons a:hover {
+/* opóźnienia */
 
-    transform:translateY(-3px);
+.project-card:nth-child(1){
 
-    box-shadow:
-    0 8px 20px rgba(56,189,248,.4);
-
-}/* TRYB JASNY / CIEMNY */
-
-
-#theme-toggle {
-
-    background:#38bdf8;
-
-    border:none;
-
-    padding:10px 15px;
-
-    border-radius:20px;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-    transition:.3s;
+    transition-delay:.1s;
 
 }
 
 
-#theme-toggle:hover {
+.project-card:nth-child(2){
 
-    transform:scale(1.1);
-
-}
-
-
-
-/* JASNY MOTYW */
-
-
-body.light {
-
-    background:
-    linear-gradient(
-        135deg,
-        #f8fafc,
-        #cbd5e1
-    );
-
-    color:#020617;
+    transition-delay:.3s;
 
 }
 
 
+.project-card:nth-child(3){
 
-body.light nav {
-
-    background:rgba(255,255,255,.8);
-
-}
-
-
-
-body.light nav a {
-
-    color:#020617;
-
-}
-
-
-
-body.light section {
-
-    background:rgba(255,255,255,.7);
-
-}
-
-
-
-body.light .project {
-
-    background:#e2e8f0;
-
-}
-
-
-
-body.light .skills div {
-
-    background:#e2e8f0;
-
-}
-
-
-
-body.light header p {
-
-    color:#334155;
+    transition-delay:.5s;
 
 }
