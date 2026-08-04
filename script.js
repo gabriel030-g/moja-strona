@@ -1,102 +1,119 @@
-const sections = document.querySelectorAll(".hidden");
+// =========================
+// ANIMACJA SEKCJI SCROLL
+// =========================
+
+const sections = document.querySelectorAll("section");
 
 
 const observer = new IntersectionObserver((entries)=>{
 
+    entries.forEach(entry=>{
 
-entries.forEach(entry=>{
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
 
 
-if(entry.isIntersecting){
+sections.forEach(section => {
 
-entry.target.classList.add("show");
-
-}
-
+    observer.observe(section);
 
 });
 
 
-});
 
 
-
-sections.forEach(section=>{
-
-observer.observe(section);
-
-});const text = document.querySelector("#typing");
+// =========================
+// ZMIENIAJĄCY SIĘ TEKST
+// =========================
 
 
-const words = [
+const typing = document.querySelector("#typing");
+
+
+const texts = [
+
     "Początkujący Frontend Developer 🚀",
+
     "Tworzę strony internetowe 💻",
+
     "Uczę się JavaScript ⚡",
+
     "Buduję własne projekty 🔥"
+
 ];
 
 
-let wordIndex = 0;
+let textIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
 
 
-function typingEffect(){
+function typeEffect(){
 
 
-const currentWord = words[wordIndex];
+    let current = texts[textIndex];
 
 
-if(!deleting){
+    if(!deleting){
 
-    text.textContent =
-    currentWord.substring(0,charIndex++);
+        typing.textContent =
+        current.substring(0,charIndex);
 
-    
-    if(charIndex > currentWord.length){
-
-        deleting = true;
-
-        setTimeout(typingEffect,1500);
-
-        return;
-
-    }
+        charIndex++;
 
 
-}else{
+        if(charIndex > current.length){
+
+            deleting = true;
+
+            setTimeout(typeEffect,1200);
+
+            return;
+
+        }
 
 
-    text.textContent =
-    currentWord.substring(0,charIndex--);
+    } else {
 
 
-    if(charIndex === 0){
+        typing.textContent =
+        current.substring(0,charIndex);
 
-        deleting = false;
 
-        wordIndex++;
+        charIndex--;
 
-        if(wordIndex === words.length){
 
-            wordIndex = 0;
+        if(charIndex === 0){
+
+            deleting = false;
+
+            textIndex++;
+
+
+            if(textIndex >= texts.length){
+
+                textIndex = 0;
+
+            }
 
         }
 
     }
 
 
-}
-
-
-setTimeout(
-typingEffect,
-deleting ? 50 : 100
-);
-
+    setTimeout(typeEffect,80);
 
 }
 
 
-typingEffect();
+typeEffect();
