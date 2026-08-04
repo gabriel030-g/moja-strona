@@ -267,4 +267,40 @@ to {
     transform:translateY(0);
 }
 
+}@media (max-width: 700px) {
+
+nav {
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+}@media (max-width:700px){
+
+header h1 {
+    font-size:42px;
+}
+
+header {
+    padding:70px 20px;
+}
+
+}section p {
+
+max-width:700px;
+
+}.location {
+
+color:#94a3b8;
+margin-top:15px;
+
 }
