@@ -431,4 +431,21 @@ padding:25px;
 }
 
 
+}.project h3 {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+
+.icon {
+    display:inline-flex;
+    width:30px;
+    justify-content:center;
+}#contact a {
+    color:#38bdf8;
+}
+
+#contact a:hover {
+    color:white;
 }
