@@ -1,385 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020617">
+  <meta name="description" content="Portfolio Gabriela — początkującego frontend developera. Poznaj moje projekty i technologie.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel | Frontend Developer</title>
 
-<title>Gabriel | Frontend Developer</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-
 <body>
-
-
-<nav>
-
-<h2 class="logo">
-Gabriel.dev
-</h2>
-
-
-<ul>
-
-<li><a href="#about">O mnie</a></li>
-<li><a href="#skills">Umiejętności</a></li>
-<li><a href="#projects">Projekty</a></li>
-<li><a href="#contact">Kontakt</a></li>
-
-</ul>
-
-
-<button id="theme-toggle">
-☀️
-</button>
-
-
-</nav>
-
-
-
-
-
-<header>
-
-
-<h1>
-Cześć, jestem Gabriel 👋
-</h1>
-
-
-<h3>
-<span id="typing"></span>
-</h3>
-
-
-<p class="location">
-📍 Polska | 💻 Tworzę strony internetowe
-</p>
-
-
-<p>
-Rozwijam swoje umiejętności programistyczne
-i tworzę własne projekty webowe.
-</p>
-
-
-<a href="#projects" class="main-button">
-Moje projekty
-</a>
-
-
-</header>
-
-
-
-
-
-
-
-<main>
-
-
-
-<section id="about">
-
-
-<h2>
-O mnie
-</h2>
-
-
-<p>
-Jestem początkującym frontend developerem.
-Uczę się HTML, CSS oraz JavaScript.
-Buduję własne projekty i rozwijam swoje
-umiejętności programistyczne.
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<section id="skills">
-
-
-<h2>
-Moje technologie
-</h2>
-
-
-<div class="skills">
-
-
-<div>HTML</div>
-<div>CSS</div>
-<div>JavaScript</div>
-<div>Git</div>
-<div>GitHub</div>
-<div>React (w przyszłości)</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="projects">
-
-
-<h2>
-Moje projekty
-</h2>
-
-
-
-
-<div class="projects-container">
-
-
-
-
-
-
-<div class="project project-card">
-
-
-<h3>
-🌐 Portfolio Website
-</h3>
-
-
-<img src="images/portfolio.png" alt="Podgląd Portfolio Website">
-
-
-<p>
-Moja pierwsza strona internetowa.
-Stworzona przy użyciu HTML oraz CSS.
-</p>
-
-
-
-<div class="tags">
-
-<span>HTML</span>
-<span>CSS</span>
-
-</div>
-
-
-
-
-<div class="project-buttons">
-
-
-<a href="https://github.com/gabriel030-g/moja-strona" target="_blank">
-Kod
-</a>
-
-
-<a href="https://gabriel030-g.github.io/moja-strona/" target="_blank">
-Demo
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="project project-card">
-
-
-<h3>
-✅ To Do App
-</h3>
-
-
-<img src="images/todo.png" alt="Podgląd aplikacji To Do">
-
-
-<p>
-Aplikacja do zarządzania zadaniami.
-Projekt wykonany w JavaScript.
-</p>
-
-
-
-
-<div class="tags">
-
-<span>JavaScript</span>
-<span>LocalStorage</span>
-
-</div>
-
-
-
-
-<div class="project-buttons">
-
-
-<a href="#" target="_blank">
-Kod
-</a>
-
-
-<a href="#" target="_blank">
-Demo
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="project project-card">
-
-
-<h3>
-☁️ Weather App
-</h3>
-
-
-<img src="images/weather.png" alt="Podgląd Weather App">
-
-
-<p>
-Aplikacja pogodowa wykorzystująca API.
-</p>
-
-
-
-
-<div class="tags">
-
-<span>JavaScript</span>
-<span>API</span>
-
-</div>
-
-
-
-
-
-<div class="project-buttons">
-
-
-<a href="#" target="_blank">
-Kod
-</a>
-
-
-<a href="#" target="_blank">
-Demo
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section id="contact">
-
-
-<h2>
-Kontakt
-</h2>
-
-
-
-<p>
-
-GitHub:
-
-<a href="https://github.com/gabriel030-g" target="_blank">
-github.com/gabriel030-g
-</a>
-
-</p>
-
-
-</section>
-
-
-
-
-
-</main>
-
-
-
-
-
-
-<footer>
-
-© 2026 Gabriel
-
-</footer>
-
-
-
-
-
-
-<script src="script.js"></script>
-
-
+  <a class="skip-link" href="#main" data-i18n="skipLink">
+    Przejdź do treści
+  </a>
+
+  <nav class="navbar" aria-label="Nawigacja główna">
+    <a class="logo" href="#top">Gabriel.dev</a>
+
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="navAbout">O mnie</a></li>
+      <li><a href="#skills" data-i18n="navSkills">Umiejętności</a></li>
+      <li><a href="#projects" data-i18n="navProjects">Projekty</a></li>
+      <li><a href="#contact" data-i18n="navContact">Kontakt</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button
+        id="language-toggle"
+        class="utility-button"
+        type="button"
+        aria-label="Change language to English"
+      >EN</button>
+
+      <button
+        id="theme-toggle"
+        class="utility-button"
+        type="button"
+        aria-label="Włącz tryb jasny"
+      >☀️</button>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <p class="eyebrow" data-i18n="heroEyebrow">MOJE PORTFOLIO</p>
+
+    <h1 data-i18n="heroTitle">Cześć, jestem Gabriel 👋</h1>
+
+    <h2 class="typing-line">
+      <span id="typing">Początkujący Frontend Developer 🚀</span>
+      <span class="typing-cursor" aria-hidden="true"></span>
+    </h2>
+
+    <p class="location" data-i18n="location">
+      📍 Polska · 💻 Tworzę strony internetowe
+    </p>
+
+    <p class="hero-description" data-i18n="heroDescription">
+      Rozwijam swoje umiejętności programistyczne i tworzę własne projekty webowe.
+    </p>
+
+    <a href="#projects" class="main-button" data-i18n="heroButton">
+      Zobacz moje projekty
+    </a>
+  </header>
+
+  <main id="main">
+    <section id="about" class="reveal">
+      <p class="section-kicker" data-i18n="aboutKicker">KILKA SŁÓW O MNIE</p>
+      <h2 data-i18n="aboutTitle">O mnie</h2>
+
+      <p data-i18n="aboutText">
+        Jestem początkującym frontend developerem. Uczę się HTML, CSS oraz JavaScript.
+        Buduję własne projekty i rozwijam swoje umiejętności programistyczne.
+      </p>
+    </section>
+
+    <section id="skills" class="reveal">
+      <p class="section-kicker" data-i18n="skillsKicker">NARZĘDZIA, KTÓRYCH UŻYWAM</p>
+      <h2 data-i18n="skillsTitle">Moje technologie</h2>
+
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill" data-i18n="futureSkill">React (w przyszłości)</span>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <p class="section-kicker" data-i18n="projectsKicker">RZECZY, KTÓRE ZBUDOWAŁEM</p>
+      <h2 data-i18n="projectsTitle">Moje projekty</h2>
+
+      <p class="section-intro" data-i18n="projectsIntro">
+        Kilka projektów, dzięki którym ćwiczę tworzenie stron i aplikacji.
+      </p>
+
+      <div class="projects-container">
+        <article class="project project-card reveal">
+          <img
+            src="images/portfolio.png"
+            alt="Podgląd Portfolio Website"
+            loading="lazy"
+            width="640"
+            height="360"
+          >
+
+          <div class="project-content">
+            <h3 data-i18n="portfolioTitle">🌐 Portfolio Website</h3>
+
+            <p data-i18n="portfolioDescription">
+              Moja strona portfolio, stworzona przy użyciu HTML, CSS oraz JavaScript.
+            </p>
+
+            <div class="tags" aria-label="Technologie projektu">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://github.com/gabriel030-g/moja-strona"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="codeButton"
+              >Kod</a>
+
+              <a
+                href="https://gabriel030-g.github.io/moja-strona/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="demoButton"
+              >Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-card reveal">
+          <img
+            src="images/todo.png"
+            alt="Podgląd aplikacji To Do"
+            loading="lazy"
+            width="640"
+            height="360"
+          >
+
+          <div class="project-content">
+            <h3 data-i18n="todoTitle">✅ To Do App</h3>
+
+            <p data-i18n="todoDescription">
+              Aplikacja do zarządzania zadaniami. Projekt wykonany w JavaScript.
+            </p>
+
+            <div class="tags" aria-label="Technologie projektu">
+              <span>JavaScript</span>
+              <span>LocalStorage</span>
+            </div>
+
+            <div class="project-buttons">
+              <span class="project-link disabled" data-i18n="comingSoon">Wkrótce</span>
+              <span class="project-link disabled" data-i18n="comingSoon">Wkrótce</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-card reveal">
+          <img
+            src="images/weather.png"
+            alt="Podgląd aplikacji Weather App"
+            loading="lazy"
+            width="640"
+            height="360"
+          >
+
+          <div class="project-content">
+            <h3 data-i18n="weatherTitle">☁️ Weather App</h3>
+
+            <p data-i18n="weatherDescription">
+              Aplikacja pogodowa wykorzystująca API.
+            </p>
+
+            <div class="tags" aria-label="Technologie projektu">
+              <span>JavaScript</span>
+              <span>API</span>
+            </div>
+
+            <div class="project-buttons">
+              <span class="project-link disabled" data-i18n="comingSoon">Wkrótce</span>
+              <span class="project-link disabled" data-i18n="comingSoon">Wkrótce</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <p class="section-kicker" data-i18n="contactKicker">POROZMAWIAJMY</p>
+      <h2 data-i18n="contactTitle">Kontakt</h2>
+
+      <p data-i18n="contactText">
+        Chcesz zobaczyć mój kod albo śledzić moje kolejne projekty?
+        Znajdziesz mnie na GitHubie.
+      </p>
+
+      <a
+        class="contact-link"
+        href="https://github.com/gabriel030-g"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span data-i18n="githubProfile">Odwiedź mój profil GitHub</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Gabriel.dev</p>
+    <a href="#top" data-i18n="backToTop">Wróć na górę ↑</a>
+  </footer>
 </body>
-
 </html>

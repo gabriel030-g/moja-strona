@@ -1,0 +1,365 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+
+    font-family:Arial, sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #1e293b
+    );
+
+    color:white;
+
+}
+
+.container {
+
+    width:90%;
+    max-width:500px;
+
+    background:#0f172a;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.3);
+
+}
+
+h1 {
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#38bdf8;
+
+}
+
+.input-box {
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+input {
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+}
+
+input:focus {
+
+    outline:none;
+
+}
+
+button {
+
+    padding:15px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#38bdf8;
+
+    color:#020617;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover {
+
+    transform:translateY(-2px);
+
+}
+
+#taskList {
+
+    list-style:none;
+
+}
+
+#taskList li {
+
+    background:#1e293b;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+}
+#taskList li {
+
+    background:#1e293b;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+#taskList li button {
+
+    padding:8px 15px;
+
+    font-size:14px;
+
+}.done {
+
+    text-decoration:line-through;
+
+    opacity:.6;
+
+}/* =====================
+   ULEPSZENIE TODO APP
+===================== */
+
+
+.subtitle {
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+#taskList li {
+
+    animation:showTask .4s ease;
+
+}
+
+
+
+@keyframes showTask {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+#taskList li button {
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+
+
+#taskList li button:hover {
+
+    background:#dc2626;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+.done {
+
+    text-decoration:line-through;
+
+    opacity:.5;
+
+}
+
+
+
+.done button {
+
+    opacity:1;
+
+}
+/* =====================
+   LICZNIK ZADAŃ
+===================== */
+
+
+.stats {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+    width:100%;
+
+}
+
+
+.stats div {
+
+    background:#1e293b;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    flex:1;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+
+.stats span {
+
+    display:block;
+
+    color:#38bdf8;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-top:5px;
+
+}
+
+
+
+@media(max-width:500px){
+
+    .stats {
+
+        flex-direction:column;
+
+    }
+
+}/* FILTRY */
+
+.filters {
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+    width:100%;
+
+}
+
+.filter {
+
+    flex:1;
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+
+
+.filter.active {
+
+    background:#38bdf8;
+
+    color:#020617;
+
+}
+
+
+@media(max-width:500px){
+
+    .filters{
+
+        flex-direction:column;
+
+    }
+
+}/* PUSTA LISTA */
+
+
+.empty {
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    padding:30px;
+
+    font-size:18px;
+
+}

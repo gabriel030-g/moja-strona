@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>To Do App</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+✅ To Do App
+</h1>
+
+
+<p class="subtitle">
+Organizuj swoje zadania
+</p>
+
+
+
+<!-- LICZNIK -->
+
+<div class="stats">
+
+
+    <div>
+
+        Wszystkie:
+
+        <span id="totalTasks">
+        0
+        </span>
+
+    </div>
+
+
+
+    <div>
+
+        Wykonane:
+
+        <span id="completedTasks">
+        0
+        </span>
+
+    </div>
+
+
+
+    <div>
+
+        Pozostałe:
+
+        <span id="remainingTasks">
+        0
+        </span>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- FILTRY -->
+
+<div class="filters">
+
+
+    <button class="filter active" data-filter="all">
+
+        Wszystkie
+
+    </button>
+
+
+
+    <button class="filter" data-filter="active">
+
+        Aktywne
+
+    </button>
+
+
+
+    <button class="filter" data-filter="completed">
+
+        Wykonane
+
+    </button>
+
+
+</div>
+
+
+
+
+
+<!-- DODAWANIE -->
+
+<div class="input-box">
+
+
+<input
+id="taskInput"
+type="text"
+placeholder="Dodaj nowe zadanie">
+
+
+
+<button id="addBtn">
+
+Dodaj
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- LISTA -->
+
+<ul id="taskList">
+
+</ul>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
